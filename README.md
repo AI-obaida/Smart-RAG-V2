@@ -270,7 +270,7 @@ Initialize the tables in a NEW, EMPTY application database using the included sc
 ```powershell
 psql -U postgres -d smartrag -X -v ON_ERROR_STOP=1 -f schema.sql
 ```
-
+If PowerShell cannot find psql, add the PostgreSQL bin directory to your PATH or run psql using its full executable path.
 The script creates the documents and document_chunks tables and enables pgvector. Do not execute this initialization script against an existing populated database.
 
 ### 5. Prepare Ollama
